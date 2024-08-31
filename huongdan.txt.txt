@@ -1,0 +1,30 @@
+*** Giới thiệu website boocart : 1 website test thương mại điện tử về việc đặt mua sách gồm 1 số chức năng chính : đăng kí , đăng nhập , chọn sản phẩm , tìm kiếm đơn hàng , đặt hàng theo ý muốn , thanh toán 
+
+*** Mục đích testing automation *** ( Thực hiện phía UI ( giao diện người dùng)
+
+   + Kiểm tra các button , textbox ,... được thiết kế đúng với tài liệu phân tích thiết kế
+   + Kiểm tra luồng nghiệp vụ , chức năng chỉnh của website đảm bảo hoạt động đúng mong muốn và require phía người dùng
+   + Kiểm thử các trường hợp xảy ra lỗi  , đảm bảo trả ra các mã lỗi đúng tài liệu thiết kế của developer front-end
+
+
+*** Thực hiện ***
+  + ngôn ngữ : typescripts
+  + framework testing : playwright , cucumber ( BDD )
+  + IDE : VScode , node js
+  + model : Page Object Model ( chia theo pages để quản lý phần tử )
+  + reports : Báo cáo đầy đủ các step , image ( lỗi nếu có ) , logs , video quay lại quá trình automation.
+
+ *** Cách thực hiện chạy code automation ***
+Giải thích project : dự án chạy a đã tích hợp với cucumber để khi đọc kịch bản test được rõ ràng đầu vào , mục đích và kết quả đạt được , có thời gian e nên đọc qua tài liệu cucumber nhé ( ngôn ngữ hướng hành vi ) ==> trong code là phần file feature nhé , còn lại các file khác chủ yếu là code typescripts a đã code với các method của playwright cung cấp như quản lý url , lấy phần tử trên trang , click(), type(),... a đã phân chia ra nhiều file đi theo hướng dẫn của nó a đã note lại trong phần readme.md nhé e
+có 2 cách chạy : 
+   +  chạy npm run test chạy toàn bộ file trong featurtes ( chạy toàn bộ file test )
+   +  chạy theo chú thích npm run test --TAGS="@test or @add" để chạy cụ thể 1 test script muốn chạy nhé !
+
+
+*** Set up enviroment để run code auto playwright ***
+1.Tải vscode , cài đặt node js ( khuyên dùng mới nhất là ổn nhé )
+2.Cài đặt extensions : playwright for vscode (install), cucumber
+3. `npm i` : chạy lệnh này dưới terminal ==> cài đặt các phụ thuộc
+4. `npx playwright install` ==> cài đặt playwright  và các phụ thuộc
+5. `npm run test` : chạy tất cả các test có trong file feature
+  
